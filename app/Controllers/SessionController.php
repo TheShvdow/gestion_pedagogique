@@ -23,6 +23,7 @@ class SessionController
         // var_dump($_SESSION['user']);
 
         $sessions = $this->sessionModel->getSessions();
+        // var_dump($sessions);
 
         include __DIR__ . '/../Views/session.html.php';
     }
@@ -37,9 +38,9 @@ class SessionController
     $user = $_SESSION['user'];
     $userId = $user['id'];
 
-        echo '<pre>';
-print_r($_SESSION['user']);
-echo '</pre>';
+//         echo '<pre>';
+// print_r($_SESSION['user']);
+// echo '</pre>';
 
     $semestre = isset($_GET['semestre']) ? intval($_GET['semestre']) : 1;
     $limit = $perPage;

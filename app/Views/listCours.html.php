@@ -1,6 +1,6 @@
 <?php require 'head.html.php'; ?>
 
-<?php require 'header.html.php'; ?>
+<?php require 'header.html.php'; ?>  
 <body class="bg-gray-100">
 
 <div class="container mx-auto py-8">
@@ -22,15 +22,18 @@
             <tr>
                 <th class="py-2">Nombre d'Heures</th>
                 <th class="py-2">Module</th>
-                <th class="py-2">Professeur</th>
+                <th class="py-2">Classe</th>
+                <th class="py-2">semestre</th>
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($courses as $course): ?>
+            <?php foreach ($courses as $course): 
+                ?>
                 <tr>
                     <td class="py-2 px-4 border"><?= htmlspecialchars($course['nombre_heure_global']); ?></td>
                     <td class="py-2 px-4 border"><?= htmlspecialchars($course['nom_module']); ?></td>
-                    <td class="py-2 px-4 border"><?= htmlspecialchars($course['nom_professeur']); ?></td>
+                    <td class="py-2 px-4 border"><?= htmlspecialchars($course['nom_classe']); ?></td>
+                    <td class="py-2 px-4 border"><?= htmlspecialchars($course['semestre']); ?></td>
                 </tr>
             <?php endforeach; ?>
         </tbody>

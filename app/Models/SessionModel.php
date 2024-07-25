@@ -30,7 +30,7 @@ class SessionModel
                 sc.nombre_heure, 
                 sc.type_session, 
                 sc.etat_session, 
-                c.nom_cours
+                
               FROM 
                 session_cours sc
               JOIN 
@@ -43,7 +43,7 @@ class SessionModel
     $stmt = $this->db->prepare($query);
     $stmt->bindValue(':userId', $userId, \PDO::PARAM_INT);
     $stmt->execute();
-    return $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    return $stmt->fetchAll(\PDO::FETCH_CLASS);
 }
 
 }

@@ -1,3 +1,6 @@
+<?php $user = $_SESSION['user'];
+    
+?>
 <div class="flex h-screen">
     <!-- Sidebar -->
     <div class="bgcolore w-60 flex flex-col items-center p-4">
@@ -20,16 +23,16 @@
             <div class="flex items-center space-x-4">
                 <div class="flex items-center space-x-2">
                     <span class="text-gray-600">Connecté</span>
-                    <span class="font-bold"><?php /* echo htmlspecialchars($user['prenom'] . ' ' . $user['nom']) */; 
+                    <span class="font-bold"><?php echo htmlspecialchars($user['prenom'] . ' ' . $user['nom']); 
                     // echo '<pre>';
                     // var_dump($user['prenom']);
                     // echo '</pre>';
                     ?></span>
                 </div>
-                <button class="p-2 rounded-full bg-gray-300">
+                <a href="/logout" class="p-2 rounded-full bg-gray-300">
                     <svg class="h-6 w-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
-                </button>
+                </a>
             </div>
         </div>

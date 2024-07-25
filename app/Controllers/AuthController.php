@@ -31,10 +31,10 @@ class AuthController
                     // Démarrez la session et stockez les informations de l'utilisateur
                     session_start();
                     $_SESSION['user'] = [
-                        'id' => $user['id'],
+                        'id' => $user['id_user'],
                         'nom' => $user['nom'],
                         'prenom' => $user['prenom'],
-                        'email' => $user['email']
+                        'email' => $user['username']
                     ];
                     
                     header('Location: /?action=courses'); // Assurez-vous que l'URL correspond à celle gérée par votre routeur
