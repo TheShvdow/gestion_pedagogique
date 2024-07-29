@@ -1,5 +1,4 @@
 <?php
-
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -31,7 +30,7 @@ switch ($uri) {
             exit;
         }
         $controller = new SessionController();
-        $controller->listSessions();
+        $controller->showSessions();
         break;
 
     case '/login':

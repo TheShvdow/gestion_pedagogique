@@ -23,7 +23,7 @@ class SessionController
         // var_dump($_SESSION['user']);
 
         $sessions = $this->sessionModel->getSessions();
-        // var_dump($sessions);
+        
 
         include __DIR__ . '/../Views/session.html.php';
     }
@@ -48,6 +48,7 @@ class SessionController
 
     // Récupérer les sessions filtrées
     $sessionCourses = $this->sessionModel->getFilteredSessions($userId, $semestre);
+
 
     include __DIR__ . '/../Views/session.html.php';
 }

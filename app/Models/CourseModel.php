@@ -24,19 +24,20 @@ class CourseModel
     public function getCourses($limit, $offset, $userId, $semestre)
     {
         $query = "SELECT 
-                    c.id_cours, 
-                    m.libelle AS nom_module, 
-                    c.nombre_heure_global, 
-                    c.semestre,
-                    cl.libelle AS nom_classe
-                  FROM 
-                    cours c
-                  JOIN 
-                    modules m ON c.id_module = m.id_module
-                  JOIN 
-                    classes cl ON c.id_classe = cl.id_classe
-                  WHERE 
-                    c.id_professeur = :userId 
+    c.id_cours, 
+    m.libelle AS nom_module, 
+    c.nombre_heure_global, 
+    c.semestre,
+    cl.libelle AS nom_classe
+    FROM 
+        cours c
+    JOIN 
+        modules m ON c.id_module = m.id_module
+    JOIN 
+        classes cl ON c.id_classe = cl.id_classe
+    WHERE 
+        c.id_professeur = :userId
+ 
                   ORDER BY 
                      c.semestre
                   LIMIT :limit OFFSET :offset";

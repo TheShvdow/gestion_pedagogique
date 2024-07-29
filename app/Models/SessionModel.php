@@ -23,27 +23,30 @@ class SessionModel
     public function getFilteredSessions($userId, $semestre)
 {
     $query = "SELECT 
-                sc.id_session, 
-                sc.date, 
-                sc.heure_debut, 
-                sc.heure_fin, 
-                sc.nombre_heure, 
-                sc.type_session, 
-                sc.etat_session, 
-                
-              FROM 
-                session_cours sc
-              JOIN 
-                cours c ON sc.id_cours = c.id_cours
-              WHERE 
-                sc.id_professeur = :userId
+    sc.id_session, 
+    sc.date, 
+    sc.heure_debut, 
+    sc.heure_fin, 
+    sc.nombre_heure, 
+    sc.type_session, 
+    sc.etat_session, 
+    m.libelle AS nom_cours
+    FROM 
+        session_cours sc
+    JOIN 
+        cours c ON sc.id_cours = c.id_cours
+    JOIN 
+        modules m ON c.id_module = m.id_module
+    WHERE 
+        sc.id_professeur = :userId
+
               ORDER BY 
                 sc.date, sc.heure_debut";
                 
     $stmt = $this->db->prepare($query);
     $stmt->bindValue(':userId', $userId, \PDO::PARAM_INT);
     $stmt->execute();
-    return $stmt->fetchAll(\PDO::FETCH_CLASS);
+    return $stmt->fetchAll(\PDO::FETCH_ASSOC);
 }
 
 }
