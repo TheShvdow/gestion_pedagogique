@@ -1,6 +1,6 @@
 
 
-<footer class="bg-white rounded-lg dark:bg-gray-900 m-4 absolute bottom-0 w-[83vw]">
+<footer class="bg-white shadow-lg rounded-lg dark:bg-gray-900 m-4 absolute bottom-0 w-[83vw]">
     <div class="w-full max-w-screen-xl mx-auto p-4 md:py-8">
         <!-- <div class="sm:flex sm:items-center sm:justify-between">
             <a href="/" class="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">

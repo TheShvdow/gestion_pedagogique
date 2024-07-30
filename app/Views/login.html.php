@@ -58,7 +58,7 @@
 						</div>
 						<div class="relative mt-10 flex justify-between">
 							<button class="bg-white w-48 h-16 text-gray-900 rounded-md px-2 py-1">Se Connecter</button>
-							<a href="/register" class="text-white hover:text-blue-600 hover:underline self-center">S'inscrire</a>
+							<a href="/register" class="w-48 h-16 border-2 text-center py-4 rounded-md text-white self-center">S'inscrire</a>
 						</div>
 					
 					
