@@ -38,6 +38,11 @@ switch ($uri) {
         $controller->login();
         break;
 
+    case '/register':
+    $controller = new AuthController(); 
+        $controller->register();
+        break;
+
     case '/logout':
         $controller = new AuthController();
         $controller->logout();

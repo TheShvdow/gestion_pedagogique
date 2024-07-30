@@ -30,5 +30,19 @@ class UserModel
         $stmt->execute();
         return $stmt->fetch(\PDO::FETCH_ASSOC);
     }
+    public function UserRegister($nom, $prenom, $telephone, $username, $password, $role)
+        {
+            $query = "INSERT INTO users (nom, prenom, telephone, username, password, id_role) VALUES (:nom, :prenom, :telephone, :username, :password, :role)";
+            $stmt = $this->db->prepare($query);
+            $stmt->bindValue(':nom', $nom);
+            $stmt->bindValue(':prenom', $prenom);
+            $stmt->bindValue(':telephone', $telephone);
+            $stmt->bindValue(':username', $username);
+            $stmt->bindValue(':password', md5($password)); // Remarque : utilisez bcrypt ou Argon2 pour le hashage des mots de passe en production
+            $stmt->bindValue(':role', $role); // Correction ici
+            $stmt->execute();
+            return $this->db->lastInsertId();
+        }
+
 }
 ?>
