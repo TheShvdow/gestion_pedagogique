@@ -144,12 +144,12 @@
     transform: rotate(-6deg) translateY(-5px);
   }
   100% {
-    transform: rotate(-6deg) translateY(0px);
+    transform: rotate(-12deg) translateY(0px);
   }
 }
 
 .animate-background {
-  animation: floatRotate 6s ease-in-out infinite;
+  animation: floatRotate 20s ease-in-out infinite;
 }
 @keyframes floatRotate {
   0% {
@@ -165,16 +165,16 @@
     transform: rotate(-7deg) translateY(-5px);
   }
   100% {
-    transform: rotate(-6deg) translateY(0px);
+    transform: rotate(-12deg) translateY(0px);
   }
 }
 .animate-background {
-  animation: floatRotate 6s ease-in-out infinite;
+  animation: floatRotate 20s ease-in-out infinite;
   transition: all 0.3s ease;
 }
 @media (min-width: 640px) {
   .animate-background {
-    animation: floatRotate 6s ease-in-out infinite;
+    animation: floatRotate 20s ease-in-out infinite;
   }
 }
 
