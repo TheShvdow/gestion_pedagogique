@@ -18,9 +18,9 @@
             <div class="absolute inset-0 bg-gradient-to-r from-blue-200 to-blue-300 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl animate-background"></div>
             <div class="relative px-8 py-10 bgcolor shadow-lg sm:rounded-3xl">
                 <div class="max-w-md mx-auto">
-                    <div class="flex justify-center items-center mb-8">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJd6peDvOqaNnWCcLH1ZEHmgIx2oCwVyBEkQ&s" alt="" class="h-24 w-24">
-                        <h2 class="text-3xl font-semibold text-white ml-6">Ecole 221</h2>
+                    <div class="flex justify-center items-center mb-8 cursor-pointer">
+                        <img href="/" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJd6peDvOqaNnWCcLH1ZEHmgIx2oCwVyBEkQ&s" alt="" class="h-24 w-24">
+                        <h2 href="/" class="text-3xl font-semibold text-white ml-6">Ecole 221</h2>
                     </div>
                     <div class="space-y-8">
                         <div class="relative">
@@ -50,7 +50,10 @@
                         </div>
                     </div>
                     <div class="mt-8 flex justify-center">
-                        <button type="submit" class="bg-white text-[#295677] rounded-md px-6 py-2 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">S'inscrire</button>
+                        <button type="submit" class="bg-white w-48 h-14 text-[#295677] rounded-md px-6 py-2 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50">S'inscrire</button>
+                    </div>
+                    <div class="mt-8 text-center text-white">
+                        Vous avez déjà un compte? <a href="/login" class="text-white underline">Connectez-vous ici</a>
                     </div>
                 </div>
             </div>
